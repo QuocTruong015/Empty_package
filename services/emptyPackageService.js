@@ -31,5 +31,4 @@ function processEmptyPackage(data, month, year) {
     TotalProfit: +s.TotalProfit.toFixed(2),
   }));
 }
-
 module.exports = { processEmptyPackage };

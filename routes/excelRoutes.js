@@ -1,10 +1,11 @@
 const express = require("express");
 const multer = require("multer");
-const { uploadExcel } = require("../controllers/excelController");
+const { uploadEmptyPackage, uploadBuyingLabel } = require("../controllers/excelController");
 
 const router = express.Router();
 const upload = multer({ dest: "uploads/" });
 
-router.post("/upload-excel", upload.single("file"), uploadExcel);
+router.post("/upload-excel/empty-package", upload.single("file"), uploadEmptyPackage);
+router.post("/upload-excel/buying-label", upload.single("file"), uploadBuyingLabel);
 
 module.exports = router;
